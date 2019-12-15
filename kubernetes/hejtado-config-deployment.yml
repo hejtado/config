@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hejtado-config-deployment
+  labels:
+    name: hejtado-config
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hejtado-config
+    spec:
+      containers:
+      - name: hejtado-config
+        image: jas02/hejtado-config:0.1.0
+        env:
+        - name: FLASK_ENV
+          value: "production"
+      restartPolicy: Always
