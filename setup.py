@@ -42,5 +42,5 @@ setup(
     [console_scripts]
     hejtado-config = hejtado.config.app:main
     """,
-    install_requires=['setuptools==41.4.0', 'flask-restplus==0.13.0'],
+    install_requires=['setuptools==65.5.1', 'flask-restplus==0.13.0'],
 )
